@@ -1,0 +1,272 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.large-container {
+  min-height: 90vh; 
+}
+
+.navbar-color {
+  min-height: 10vh;
+  color: #2D2926FF;
+  background-color: #2D2926FF;
+}
+
+.footer-design {
+  padding-top:10vh;
+}
+
+.footer-color {
+  background-color: #2D2926FF;
+  color: white;
+}
+
+.button {
+  background-color:#E84545;
+  margin-right: 10px;
+  margin-top: 10px;
+  transition-duration: 0.4s;
+  color: white;
+  min-height:20px;
+  border:none;
+}
+
+.button:hover {
+  background-color: #903749 !important;
+  color: white !important;
+}
+
+.button:active {
+  background-color:#E84545;
+  color: #ffffff;
+  border:none;
+}
+
+.button:focus {
+  background-color:#E84545;
+  color: #ffffff;
+  border:none;
+}
+
+.flexible-card {
+  width: 7.5vh;
+  margin: 10px;
+}
+
+.card-header {
+  background-color: #E84545;
+  color: #ffffff;
+}
+
+.card {
+  background-color: #2D2926FF;
+  border-color: #525252;
+  border-radius: 0.5em;
+  color: white;
+}
+
+.card-body {
+  border-color: #525252;
+}
+
+.modal-header {
+  background-color: #E84545;
+  color: #ffffff;
+}
+
+.modal {
+  background-color: #2D2926FF;
+  border-color: #525252;
+  border-radius: 0.5em;
+  color: white;
+}
+
+.modal-content {
+  background-color: #2D2926FF;
+  border-color: #525252;
+  border-radius: 0.5em;
+  color: white;
+}
+
+.modal-body {
+  border-color: #525252;
+  background-color: #2D2926FF;
+  /* color: #ffffff; */
+}
+
+.modal-footer {
+  /* border-color: #525252; */
+  background-color: #2D2926FF;
+  /* color: #ffffff; */
+}
+
+.list-group-item-card {
+  background-color: #2D2926FF !important;
+  border-color: #525252;
+  color: white;
+}
+
+.list-group-item {
+  background-color: #313131;
+  border-color: #525252;
+  color: white;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  background-color: #2D2926FF;
+  border-color: grey;
+  color: white;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  background-color: #E84545;
+  border-color: grey;
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > a:focus,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > span,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > span:hover {
+  background-color: #2D2926FF;
+  border-color: grey;
+  color: grey;
+}
+
+.pagination a:hover:not(.active) {
+  border-color: grey;
+  background-color: #606e66;
+  color: white;
+}
+
+.tag-color {
+  background-color: #E84545 !important;
+  color: white !important;
+  border-radius: 0.2rem;
+}
+
+.header1-design {
+  color: #E84545 !important;
+}
+
+.header3-design {
+  color: #E84545 !important;
+  padding-top: 20px;
+}
+
+.header5-design {
+  color: #E84545 !important;
+}
+
+.card-genre-design {
+  background-color: #2D2926FF !important;
+}
+
+.table-design {
+  background-color: #2D2926FF !important;
+  border-color: #525252 !important;
+  color: white;
+  border-radius: 0.5em;
+  text-align: center;
+  table-layout: fixed;
+  width: "100%" !important;
+  margin: auto;
+}
+
+.dropdown {
+  color: white;
+}
+.dropdown-toggle {
+  background-color: #E84545 !important;
+  font-weight: bold;
+  border-color: #525252 !important;
+  color: white;
+}
+.dropdown-menu {
+  background-color: #2D2926FF !important;
+  border-color: #525252 !important;
+  color: white;
+}
+.dropdown-item:active {
+  background-color: #E84545 !important;
+  border-color: #525252 !important;
+  color: white;
+}
+
+.dropdown-item::selection {
+  background-color: #E84545 !important;
+  border-color: #525252 !important;
+  color: white;
+}
+
+.text-center {
+  text-align:center;
+}
+
+.badge-design-main {
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.text-navbar {
+  font-size: 20px;
+}
+
+.text-navbar-title {
+  color: #E84545 !important;
+  font-size: 24px;
+}
+
+.text-title-color {
+  color: #E84545 !important;
+}
