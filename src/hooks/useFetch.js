@@ -8,7 +8,7 @@ export default function useFetch(queryField, queryAttributesStr) {
   const [loading, setLoading] = useState(true);
   const controller = new AbortController();
 
-  axios.defaults.baseURL  = '<API_INVOKE_URL>'
+  axios.defaults.baseURL  = 'https://5ojeh80kw2.execute-api.us-east-1.amazonaws.com/Dev/'
 
   useEffect(() => {
     // Changing loading and success state to true whenever there's an effect
@@ -20,16 +20,17 @@ export default function useFetch(queryField, queryAttributesStr) {
         {
           "content-type": "text/plain"
         }}
-    function CRUDOperations(requestField, inputData, signal){
+    async function CRUDOperations(requestField, inputData, signal){
         if (requestField === 'addCourse'){
-            const id = Math.floor(Math.random() * (999999 - 100 + 1) + 100);
+            const id = parseInt(Math.floor(Math.random() * (999999 - 100 + 1) + 100));
             const params = {
-              id : id,
+              ID : id,
               CourseName : inputData.CourseName,
               CourseURL : inputData.CourseURL,
               ImageURL : inputData.ImageURL
             }
-            axios.post(`/`, options, {params: params}, { signal }).
+            console.log(params)
+            axios.post(`/course`, options, {params: params}).
             then(response => {
                 console.log(response)
                 if (response.status !== 200) {
@@ -43,12 +44,12 @@ export default function useFetch(queryField, queryAttributesStr) {
         }
         if (requestField === 'editCourse'){
           const params = {
-            id : inputData.id,
+            ID : inputData.id,
             CourseName : inputData.CourseName,
             CourseURL : inputData.CourseURL,
             ImageURL : inputData.ImageURL
           }
-            axios.put(`/${inputData.id}`, options, {params: params}, inputData, { signal }).
+            axios.put(`/course/${inputData.id}`, options, {params: params}).
             then(response => {
               console.log(response)
                 if (response.status !== 200) {
@@ -61,7 +62,7 @@ export default function useFetch(queryField, queryAttributesStr) {
                 });
         }
         if (requestField === 'removeCourse'){
-            axios.delete(`/${inputData.id}`, options, { signal }).
+            axios.delete(`/course/${inputData.id}`, options).
             then(response => {
                 console.log(response)
             if (response.status !== 200) {
@@ -80,7 +81,7 @@ export default function useFetch(queryField, queryAttributesStr) {
         if (queryField !== "allCourses"){
             await CRUDOperations(queryField, queryAttributes, signal)
         }
-        const response = await axios.get('/', options, { signal });
+        const response = await axios.get('/course', options, { signal });
         console.log(response)
         // Checking if the request was a success
         if (response.status === 200) {
